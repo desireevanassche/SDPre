@@ -8,13 +8,7 @@ class Objective3Lab3 {
 
     int sum = first + second + third;
 
-    System.out.print(first);
-    System.out.print("+");
-    System.out.print(second);
-    System.out.print("+");
-    System.out.print(third);
-    System.out.print("=");
-    System.out.print(sum);
+    System.out.println(first + "+" + second + "+" + third + "=" + sum);
 
   }
 }
