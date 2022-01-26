@@ -26,6 +26,8 @@ public class SwitchExample {
 
     default:
     System.out.println("Invalid grade.");
+
+    //updated to reflect an A grade 
   }
   }
 }
