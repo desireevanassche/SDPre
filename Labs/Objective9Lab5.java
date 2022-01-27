@@ -50,8 +50,9 @@ while (keepGoing) {
     System.out.println("This is not a valid option, please try again.");
     break;
 
+kb.close();
 
-  }
+    }
   }
 }
 
