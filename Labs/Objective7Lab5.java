@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Objective7Lab5 {
 
   public static void main(String[] args) {
+
     Scanner scanner = new Scanner(System.in);
     int selection;
 
@@ -11,6 +12,7 @@ public class Objective7Lab5 {
       System.out.println("1: Say Hello");
       System.out.println("2: List My Favorite Foods");
       System.out.println("3: Exit");
+      System.out.println();
 
       selection = scanner.nextInt();
 
@@ -24,7 +26,11 @@ public class Objective7Lab5 {
 
       if (selection == 3) {
         System.out.println("Goodbye");
+        break;
       }
+
     }
+    //need to close scanner but keep experiencing error code, going to return later
+
   }
 }
