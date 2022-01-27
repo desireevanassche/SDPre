@@ -10,12 +10,78 @@ public class Objective9Lab5 {
     int choice;
     double answer = 0.0;
 
-//prompting user to provide two numbers
+//Part 1 and 2: prompting user to provide variable input
 
     System.out.println("Please give me a number: ");
     num1 = kb.nextDouble();
 
     System.out.println("Please give me another number: ");
     num2 = kb.nextDouble();
+
+
+while (keepGoing) {
+  printMenu();
+  System.out.println("Which would you like to do?");
+  choice = kb.nextInt();
+
+//Part three a switch that calls on other methods to do math equations
+  switch (choice) {
+    case 1:
+    double sum = findSum(num1, num2);
+    System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+    break;
+
+    case 2:
+    double average = findAverage(num1, num2);
+    System.out.println("The average of " + num1 + " and " + num2 + " is " + average);
+    break;
+
+    case 3:
+    double tax = calcTax(num1, num2);
+    System.out.println("The amount in tax to be collected from a purchase of " + num1 + " and " + num2 + " is " + tax);
+    break;
+
+    case 4:
+    System.out.println("You've chosen to quit.");
+    return;
+    //return will close out the menu
+
+    default:
+    System.out.println("This is not a valid option, please try again.");
+    break;
+
+
   }
+  }
+}
+
+//PrintMenu Method
+public static void printMenu() {
+    System.out.println();
+    System.out.println("=========MENU=========");
+    System.out.println("|                     |");
+    System.out.println("|1. Add numbers       |");
+    System.out.println("|2. Find average      |");
+    System.out.println("|3. Calculate Tax     |");
+    System.out.println("|4. Exit              | ");
+    System.out.println("|                     |");
+    System.out.println("======================");
+}
+
+//method to findSum
+public static double findSum(double x, double y) {
+  double sum = (x + y);
+  return sum;
+}
+//Part 4 method to findAverage
+public static double findAverage(double x, double y) {
+  double average = (x + y) / 2;
+  return average;
+}
+ //Part 5 method to calcTax
+public static double calcTax(double x, double y) {
+  double tax = (x + y) * 0.0831;
+  return tax;
+}
+
 }
